@@ -1,0 +1,57 @@
+<div class="container">
+    <form>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <h1>Novo lançamento</h1>
+            </div>
+
+            <div class="ui-g-12">
+                <p-selectButton [options]="tipos" #tipo></p-selectButton>
+            </div>
+
+            <div class="ui-g-6 ui-fluid ui-md-3">
+                <label>Vencimento</label>
+                <p-calendar [locale]="pt_br" dateFormat="dd/mm/yy" [readonlyInput]="false" [showIcon]="true"></p-calendar>
+            </div>
+
+            <div class="ui-g-6 ui-fluid ui-md-3">
+                <label> {{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento' }}</label>
+                <p-calendar [locale]="pt_br" dateFormat="dd/mm/yy" [readonlyInput]="false" [showIcon]="true"></p-calendar>
+            </div>
+
+            <div class="ui-g-12 ui-fluid ui-md-9">
+                <label>Descrição</label>
+                <input pInputText type="text">
+            </div>
+
+            <div class="ui-g-12 ui-fluid ui-md-3">
+                <label>Valor</label>
+                <p-inputMask [(ngModel)]="val" mask="9" placeholder="0,00" style="text-align: right"></p-inputMask>
+
+            </div>
+
+            <div class="ui-g-12 ui-fluid ui-md-6">
+                <label>Categoria</label>
+                <p-dropdown [options]="categorias" placeholder="Selecione" filter="true"></p-dropdown>
+            </div>
+
+            <div class="ui-g-12 ui-fluid ui-md-6">
+                <label>Pessoa</label>
+                <p-dropdown [options]="pessoas" placeholder="Selecione"></p-dropdown>
+            </div>
+
+            <div class="ui-g-12 ui-fluid">
+                <label>Observação</label>
+                <textarea pInputTextarea rows="3"></textarea>
+            </div>
+
+            <div class="ui-g-12">
+                <button pButton type="submit" label="Salvar" style="margin-right: 5px"></button>
+                <button pButton type="submit" label="Novo" class="ui-button-info" style="margin-right: 5px"></button>
+                <a href="javascript:;">Voltar para a pesquisa</a>
+            </div>
+
+
+        </div>
+    </form>
+</div>
