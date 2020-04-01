@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pesquisa-pessoa',
-  templateUrl: './pesquisa-pessoa.component.html',
-  styleUrls: ['./pesquisa-pessoa.component.css']
+  selector: 'app-pessoas-pesquisa',
+  templateUrl: './pessoas-pesquisa.component.html',
+  styleUrls: ['./pessoas-pesquisa.component.css']
 })
-export class PesquisaPessoaComponent {
+export class PessoasPesquisaComponent {
 
   pessoas = [
     { nome: 'Manoel Pinheiro', cidade: 'Uberlândia', estado: 'MG', ativo: true },
